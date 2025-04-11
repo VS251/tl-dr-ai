@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tl;dr.ai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>tl;dr.ai</h1>
+            <p>Paste your text below and get an AI-powered summary</p>
+        </header>
+        
+        <main>
+            <div class="input-section">
+                <h2>Original Text</h2>
+                <textarea id="originalText" placeholder="Paste your text here (min. 100 words recommended)..."></textarea>
+                <div class="buttons">
+                    <button id="summarizeBtn">Summarize</button>
+                    <button id="clearBtn">Clear</button>
+                </div>
+            </div>
+            
+            <div class="output-section">
+                <h2>Summary</h2>
+                <div id="summary" class="summary-box">
+                    <p class="placeholder">Your summary will appear here...</p>
+                </div>
+                <div class="summary-info">
+                    <span id="charCount">0 characters</span>
+                    <button id="copyBtn" disabled>Copy Summary</button>
+                </div>
+            </div>
+        </main>
+        
+        <div id="loader" class="loader hidden">
+            <div class="spinner"></div>
+            <p>Generating summary...</p>
+        </div>
+
+        <div class="settings">
+            <label for="themeSelector">Theme:</label>
+            <select id="themeSelector">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="sunset">Sunset</option>
+            </select>
+            
+            <label for="apiKeyInput">API Key:</label>
+            <input type="password" id="apiKeyInput" placeholder="sk-...">
+            <button id="saveApiKey">Save Key</button>
+        </div>
+        
+        <footer>
+            <p>Created with ❤️ by Varun | Using OpenRouter API</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
